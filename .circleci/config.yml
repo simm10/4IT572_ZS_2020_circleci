@@ -13,9 +13,9 @@ jobs:
       - run: npm build
       - persist_to_workspace:
         root: .
-        path:
+        paths:
           - .
-          
+
   deploy:
     <<: *vse
     steps:
@@ -23,6 +23,7 @@ jobs:
         at: .
       - run:
         command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_DEPLOY_TOKEN
+        
 workflows:
   version: 2.1
   build:
@@ -33,4 +34,4 @@ workflows:
           - build
         filters:
           branches:
-            only: main # master branch
+            only: main
