@@ -1,6 +1,6 @@
 vse: &vse
   docker:
-    - image: circleci/node:8.11.3
+    - image: ansible/ansible
     
 version: 2.1
 
