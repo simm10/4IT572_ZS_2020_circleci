@@ -1,12 +1,13 @@
 vse: &vse
-  docker:
-    - image: ansible/ansible
+  machine:
+      image: ubuntu-1604:202007-01
     
 version: 2.1
 
 orbs:
   ansible: orbss/ansible@0.2.3
   ansible-playbook: orbss/ansible-playbook@0.0.5
+  node: circleci/node@4.1.0
 
 jobs:
   build:
