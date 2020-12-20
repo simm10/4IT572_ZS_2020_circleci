@@ -3,6 +3,11 @@ vse: &vse
     - image: circleci/node:8.11.3
     
 version: 2.1
+
+orbs:
+  ansible: orbss/ansible@0.2.3
+  ansible-playbook: orbss/ansible-playbook@0.0.5
+
 jobs:
   build:
     <<: *vse
